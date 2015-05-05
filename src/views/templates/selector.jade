@@ -1,0 +1,4 @@
+.selector-wrapper(ng-init='focus=false')
+    input.input-selector(ng-click='$event.stopPropagation()', ng-model='selectedItem', type='text', ng-focus='focus=true')
+    .select-item(ng-show='properItems && focus ', ng-repeat='properItem in properItems', ng-click='setItem(properItem)')
+        div(ng-bind-html='properItem.name')
